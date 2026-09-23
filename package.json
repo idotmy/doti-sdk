@@ -1,0 +1,60 @@
+{
+  "name": "@doti-protocol/sdk",
+  "version": "1.0.2",
+  "description": "Official TypeScript/JavaScript SDK for DotI (.i) Web3 Identity & Multichain Name Service",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "vitest run",
+    "lint": "eslint src/ --ext .ts"
+  },
+  "keywords": [
+    "doti",
+    "name-service",
+    "web3",
+    "identity",
+    "ens",
+    "arbitrum",
+    "optimism",
+    "ethereum",
+    "robinhood",
+    "multichain",
+    "viem",
+    "resolver"
+  ],
+  "author": "DotI Name Service <support@doti.my>",
+  "license": "MIT",
+  "homepage": "https://doti.my",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idotmy/doti-sdk.git"
+  },
+  "peerDependencies": {
+    "viem": "^2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "viem": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "viem": "^2.21.0",
+    "vitest": "^1.4.0"
+  }
+}
